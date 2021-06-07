@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const client = new Discord.Client();
-require('dotenv').config();
+
 
 
 client.once('ready', () => {
@@ -20,8 +20,8 @@ client.on('message', message => {
 		message.channel.send('Boop.');
 	} else if (command === 'server') {
 		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
-	} else if (command === 'user-info') {
-		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
+	} else if (command === 'ali') {
+		message.channel.send(`I love Ali Hamad`);
 	} else if (command === 'info') {
 		if (!args.length) {
 			return message.channel.send(`You didn't provide any arguments, ${message.author} on server ${message.guild.name}!`);
